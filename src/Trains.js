@@ -16,7 +16,6 @@ function createTrainCar(type, subtype) {
     );
   }
 
-  // Tjek subtype kun hvis den er angivet
   if (subtype) {
     if (!VALID_SUBTYPES[type].includes(subtype)) {
       throw new Error(
@@ -27,7 +26,6 @@ function createTrainCar(type, subtype) {
     }
   }
 
-  // Passagervogne SKAL have subtype
   if (type === "passengerCar" && !subtype) {
     throw new Error("Passenger cars must have a subtype");
   }

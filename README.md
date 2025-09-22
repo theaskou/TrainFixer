@@ -11,3 +11,6 @@ TODO
 
 ## Overvej hvilke fordele og ulemper der er ved at den har ét gennemløb vs. flere gennemløb.
 TODO
+
+
+
