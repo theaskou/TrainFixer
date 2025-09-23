@@ -1,18 +1,3 @@
-// 3. En funktion der kan validere om en vogn er korrekt
-// Lav en funktion som validerer om et tog er gyldigt ud fra følgende regler:
-// •Lokomotiver:
-//      ‣For tog med 10 eller færre vogne er den eneste gyldige placering som forreste vogn.
-//      ‣For tog med flere end 10 vogne SKAL der være et lokomotiv både forrest og bagest.
-// •Passagervogne:
-//      Skal være foran alle godsvogne.
-//      Der findes tre slags passagervogne:
-//          ‣Siddevogne: Ingen særlige regler.
-//          ‣Sengevogne: Hvis der er mere end én sengevogn på toget, skal de ligge i forlængelse afhinanden.
-//          ‣Spisevogne: Hvis der er en spisevogn, skal det være muligt at gå til den fra alle siddevogne uden at krydse en sengevogn.
-// •Godsvogne: Skal være bag alle passagervogne.
-//
-// Det er tilstrækkeligt hvis funktionen returnerer sand/falsk.
-
 function trainValidator(train) {
   if (!train || !train.head) {
     return false;
