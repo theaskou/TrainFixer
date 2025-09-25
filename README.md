@@ -1,7 +1,8 @@
 ## Formalia:
 * Gruppemedlemmer: Thea Louise Skou
 * En kort instruktion i hvordan man kører jeres tests: 
-    - Kør filen TrainValidator.test.js
+    - For at teste trainValidator-funktionen: Kør filen TrainValidator.test.js
+    - For at teste trainFixer-funktionen: Kør filen TrainFixer.test.js
 * Tekstafsnit til delopgave 4 om køretidskompleksitet:
 
 ## Argumentér for hvilken Big-O (asymptotisk) køretid Trainfixer-funktionen har.
@@ -26,4 +27,4 @@ Konstantfaktoren for TrainFixer funktionen er 1, da toget kun gennemløbes én g
 `+` Bruger mindre memory, fordi der ikke er behov for at gemme data ved flere gennemløb.
 `-` Performer langsommere, fordi den skal traversere gennem listen flere gange.
 
-Man kan argumentere for at læsbarhed mv. bør prioriteres højere end performance i en funktion som denne, der arbejder med små datamængder (Et togsæt er vel sjældent meget langt?), hvor forbedringen af wall-clock-time sammenlignet med en lignende funktion med højere konstanfaktor nok ikke vil kunne bemærkes alligvel.
+Man kan argumentere for at læsbarhed mv. bør prioriteres højere end performance i en funktion som denne, der arbejder med små datamængder (Et togsæt er vel sjældent meget langt?), hvor forbedringen af wall-clock-time sammenlignet med en lignende funktion med konstanfaktor på fx 5, nok ikke vil kunne bemærkes alligvel.
