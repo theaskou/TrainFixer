@@ -1,4 +1,5 @@
 import { createLinkedList } from "./LinkedList.js";
+import { createTrainCar } from "./Trains.js";
 
 function trainFixer(train) {
   const analysis = analyzeAndCategorize(train);
@@ -51,7 +52,6 @@ function calculateOptimalPassengerOrder(categories) {
     rearrangedOrder.push(...seatingCars, ...sleepingCars);
   } else {
     rearrangedOrder.push(...seatingCars, ...diningCars, ...sleepingCars);
-
   }
   return rearrangedOrder;
 }
@@ -60,7 +60,9 @@ function reconstructTrain(analysis) {
   const { categories, carCount } = analysis;
   const fixedTrain = createLinkedList();
 
-  if (categories.locomotives.length > 0) {
+  if (categories.locomotives.length === 0) {
+    fixedTrain.append(createTrainCar("locomotive"));
+  } else {
     fixedTrain.append(categories.locomotives[0]);
   }
 
@@ -69,8 +71,12 @@ function reconstructTrain(analysis) {
 
   categories.freightCars.forEach((car) => fixedTrain.append(car));
 
-  if (carCount > 10 && categories.locomotives.length > 1) {
-    fixedTrain.append(categories.locomotives[1]);
+  if (carCount >= 10) {
+    if (categories.locomotives.length < 2) {
+      fixedTrain.append(createTrainCar("locomotive"));
+    } else {
+      fixedTrain.append(categories.locomotives[1]);
+    }
   }
   return fixedTrain;
 }

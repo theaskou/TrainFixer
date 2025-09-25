@@ -73,7 +73,6 @@ function trainValidator(train) {
       return false;
     }
   }
-
   return true;
 }
 
