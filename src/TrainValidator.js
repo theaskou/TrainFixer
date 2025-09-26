@@ -7,7 +7,7 @@ function trainValidator(train) {
     return false;
   }
 
-  let carCount = 0; 
+  let carCount = 0;
   let freightCarFound = false;
   let inSleepingSection = false;
   let sleepingSectionFound = false;
@@ -17,7 +17,7 @@ function trainValidator(train) {
 
   while (currentCar) {
     carCount++;
-  
+
     if (currentCar !== train.head && currentCar.data.type === "locomotive") {
       if (carCount <= 10) {
         return false;
@@ -27,7 +27,7 @@ function trainValidator(train) {
         }
       }
     }
-  
+
     if (currentCar.data.type === "freightCar") {
       freightCarFound = true;
     }
@@ -39,8 +39,6 @@ function trainValidator(train) {
 
       if (currentCar.data.subtype === "sleepingCar") {
         if (sleepingSectionFound && !inSleepingSection) {
-
-          console.log("sleepingsectionfound, not in sleeping section");
           return false;
         }
         inSleepingSection = true;

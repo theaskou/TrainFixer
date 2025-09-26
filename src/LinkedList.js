@@ -1,4 +1,3 @@
-// Factory function til at lave en node
 function createNode(data) {
   return {
     data: data,
@@ -6,12 +5,10 @@ function createNode(data) {
   };
 }
 
-// Factory function til at lave en linket liste
 function createLinkedList() {
   return {
     head: null,
 
-    // Tilføj element til slutningen
     append(data) {
       const newNode = createNode(data);
       if (!this.head) {
@@ -25,8 +22,6 @@ function createLinkedList() {
       }
       current.next = newNode;
     },
-
-    // Andre metoder som insert, remove osv.
   };
 }
 

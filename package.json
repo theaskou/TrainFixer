@@ -1,0 +1,24 @@
+{
+  "name": "trainfixer",
+  "version": "1.0.0",
+  "description": "\"An excercise in algorithms\"",
+  "type": "module",
+  "main": "main.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theaskou/TrainFixer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/theaskou/TrainFixer/issues"
+  },
+  "homepage": "https://github.com/theaskou/TrainFixer#readme"
+}
