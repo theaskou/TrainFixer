@@ -19,12 +19,12 @@ Konstantfaktoren for TrainFixer funktionen er 1, da toget kun gennemløbes én g
 **Ét gennemløb:** \
 `+` Funktionen performer hurtigere, da den skal foretage færre operationer. \
 `-` Den bruger mere memory på at gemme data. \
-`-` Sværere at debugge, fordi alt sker på én gang. \
+`-` Sværere at debugge, fordi alt sker på én gang. 
 
 **Flere gennemløb:** \
 `+` Bedre læsbarhed. \
 `+` Nemmere at debugge pga. lavere kompleksitet. \
 `+` Bruger mindre memory, fordi der ikke er behov for at gemme data ved flere gennemløb. \
-`-` Performer langsommere, fordi den skal traversere gennem listen flere gange. \
+`-` Performer langsommere, fordi den skal traversere gennem listen flere gange. 
 
 Man kan argumentere for at læsbarhed mv. bør prioriteres højere end performance i en funktion som denne, der arbejder med små datamængder (Et togsæt er vel sjældent meget langt?), hvor forbedringen af wall-clock-time sammenlignet med en lignende funktion med konstanfaktor på fx 5, nok ikke vil kunne bemærkes alligvel.
