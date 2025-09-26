@@ -16,12 +16,12 @@ I min version af TrainFixer funktionen, traverseres toget én gang når data i n
 Konstantfaktoren for TrainFixer funktionen er 1, da toget kun gennemløbes én gang.
 
 ## Overvej hvilke fordele og ulemper der er ved at den har ét gennemløb vs. flere gennemløb.
-**Ét gennemløb:**
+**Ét gennemløb:** \
 `+` Funktionen performer hurtigere, da den skal foretage færre operationer. \
 `-` Den bruger mere memory på at gemme data. \
 `-` Sværere at debugge, fordi alt sker på én gang. \
 
-**Flere gennemløb:**
+**Flere gennemløb:** \
 `+` Bedre læsbarhed. \
 `+` Nemmere at debugge pga. lavere kompleksitet. \
 `+` Bruger mindre memory, fordi der ikke er behov for at gemme data ved flere gennemløb. \
