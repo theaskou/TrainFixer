@@ -22,6 +22,23 @@ function createLinkedList() {
       }
       current.next = newNode;
     },
+
+    appendList(list) {
+      if (!list || !list.head) {
+        return;
+      }
+
+      if (!this.head) {
+        this.head = list.head;
+        return;
+      }
+
+      let current = this.head;
+      while (current.next) {
+        current = current.next;
+      }
+      current.next = list.head;
+    },
   };
 }
 

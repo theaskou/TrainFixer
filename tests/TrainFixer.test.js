@@ -441,9 +441,9 @@ runTransformTest(
   ]),
   createTrain([
     "locomotive",
+    { type: "passengerCar", subtype: "sleepingCar" }, // Grupperet
+    { type: "passengerCar", subtype: "sleepingCar" }, // Grupperet
     { type: "passengerCar", subtype: "seatingCar" }, // Flyttet væk
-    { type: "passengerCar", subtype: "sleepingCar" }, // Grupperet
-    { type: "passengerCar", subtype: "sleepingCar" }, // Grupperet
   ])
 );
 
