@@ -8,19 +8,19 @@ function createNode(data) {
 function createLinkedList() {
   return {
     head: null,
+    tail: null,
 
     append(data) {
       const newNode = createNode(data);
+
       if (!this.head) {
         this.head = newNode;
+        this.tail = newNode;
         return;
       }
 
-      let current = this.head;
-      while (current.next) {
-        current = current.next;
-      }
-      current.next = newNode;
+      this.tail.next = newNode;
+      this.tail = newNode;
     },
 
     appendList(list) {
@@ -30,14 +30,12 @@ function createLinkedList() {
 
       if (!this.head) {
         this.head = list.head;
+        this.tail = list.tail;
         return;
       }
 
-      let current = this.head;
-      while (current.next) {
-        current = current.next;
-      }
-      current.next = list.head;
+      this.tail.next = list.head;
+      this.tail = list.tail;
     },
   };
 }
